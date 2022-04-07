@@ -1,0 +1,205 @@
+#main-content {
+    grid-area: content;
+    display:flex;
+    flex-direction:column;
+}
+#hotel-content-cover {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+}
+
+#hotel-content-cover img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%; 
+}
+
+#hotel-header {
+    display: flex;
+    border-bottom: 2px solid lightblue;
+}
+
+#hotel-title {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#hotel-title h2{
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 200;
+
+}
+
+#hotel-title a {
+    font-size: 0.8em;
+    margin: 0;
+    color: hsl(209, 52%, 62%);;
+}
+
+#hotel-rating {
+    width: 100px;
+    background-color: hsl(209, 52%, 62%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 0;
+    color: white;
+}
+
+#hotel-rating p {
+    margin: 0;
+}
+
+#hotel-mark {
+    font-size: 1.5em;
+}
+
+#hotel-main {
+    padding: 30px;
+    background-color:hsl(202, 57%, 89%);
+    display: flex;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    font-size: 0.8em;
+}
+
+#hotel-info-desc {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#review {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#read-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: hsl(209, 75%, 50%);
+    cursor: pointer;
+}
+
+#review-more p {
+    border-bottom: hsl(209, 75%, 50%) 2px solid;
+    height: 2em;
+}
+
+#hotel-main p {
+    margin: 0;
+}
+
+#desc-features {
+    margin: 2em 0;
+    padding: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    border: 2px solid lightblue;
+    border-width: 2px 0 2px 0;
+}
+
+#book{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    flex: 1;
+
+}
+
+#book-text {
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+#book-button {
+    background: rgb(177,215,237);
+    background: linear-gradient(90deg, rgba(177,215,237,1) 0%, rgba(110,161,210,1) 100%);
+    color: white;
+    padding: 0.7em 2em;
+    border: 0;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#desc-para p {
+    margin-bottom: 1em;
+}
+
+#desc-features li {
+    list-style-type: none;
+    display: grid;
+}
+
+#recommend {
+    display: flex;
+    justify-content: space-between;
+}
+
+#recommend img {
+    width: 2em;
+    height: 2em;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+
+.review-card {
+    background-color: white;
+    padding: 30px;
+}
+
+.review-user {
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.user-img {
+    width: 5em;
+    height: 5em;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 2em;
+}
+
+.user-name {
+    font-weight: 500;
+    color: hsl(209, 75%, 50%);
+}
+
+.user-rating {
+    margin-left: auto!important;
+    font-size: 1.5em;
+    color: hsl(209, 75%, 50%);
+}
+
+@media screen and (max-width: 768px) {
+    #hotel-main, #hotel-content-cover, #hotel-header, #hotel-title, #desc-recom {
+        flex-direction: column;
+    }
+    #book-text { font-size: 1.5em; }
+    #hotel-title { padding: 20px; }
+    #hotel-rating { width: 100%; }
+    #hotel-main { padding: 30px 0; }
+    #hotel-main, #review { gap: 15px; }
+}
+

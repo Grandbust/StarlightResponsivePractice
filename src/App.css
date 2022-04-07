@@ -1,0 +1,17 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#merge {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #merge {
+    flex-direction: column;
+  }
+}
